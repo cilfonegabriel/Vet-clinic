@@ -21,3 +21,17 @@ INSERT INTO owner VALUES (DEFAULT, 'Jodie Whittaker', 38);
 
 INSERT INTO species VALUES (DEFAULT, 'Pokemon');
 INSERT INTO species VALUES (DEFAULT, 'Digimon');
+
+UPDATE animals SET species_id = 2 WHERE name LIKE '%mon';
+UPDATE animals SET species_id = 1 WHERE species_id IS NULL;
+
+UPDATE animals SET owner_id = 1 WHERE name LIKE 'Agumon';
+UPDATE animals SET owner_id = 2 WHERE name LIKE 'Gabumon';
+UPDATE animals SET owner_id = 2 WHERE name LIKE 'Pikachu';
+UPDATE animals SET owner_id = 3 WHERE name LIKE 'Devimon';
+UPDATE animals SET owner_id = 3 WHERE name LIKE 'Plantmon';
+UPDATE animals SET owner_id = 4 WHERE name LIKE 'Charmander';
+UPDATE animals SET owner_id = 4 WHERE name LIKE 'Squirtle';
+UPDATE animals SET owner_id = 4 WHERE name LIKE 'Blossom';
+UPDATE animals SET owner_id = 5 WHERE name LIKE 'Angemon';
+UPDATE animals SET owner_id = 5 WHERE name LIKE 'Boarmon';
