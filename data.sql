@@ -11,3 +11,13 @@ INSERT INTO animals VALUES (DEFAULT, 'Angemon','06-12-2005', 1, TRUE, -45.0 );
 INSERT INTO animals VALUES (DEFAULT, 'Boarmon','06-07-2005', 7, TRUE, 20.4 );
 INSERT INTO animals VALUES (DEFAULT, 'Blossom','10-13-1998', 3, TRUE, 17.0 );
 INSERT INTO animals VALUES (DEFAULT, 'Ditto','05-14-2022', 4, TRUE, 22.0 );
+
+INSERT INTO owner VALUES (DEFAULT, 'Sam Smith', 34);
+INSERT INTO owner VALUES (DEFAULT, 'Jeniffer Orwell', 19);
+INSERT INTO owner VALUES (DEFAULT, 'Bob', 45);
+INSERT INTO owner VALUES (DEFAULT, 'Melody Pond', 77);
+INSERT INTO owner VALUES (DEFAULT, 'Dean Winchester', 14);
+INSERT INTO owner VALUES (DEFAULT, 'Jodie Whittaker', 38);
+
+INSERT INTO species VALUES (DEFAULT, 'Pokemon');
+INSERT INTO species VALUES (DEFAULT, 'Digimon');
