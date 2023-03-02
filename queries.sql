@@ -64,8 +64,7 @@ SELECT vets.name, COUNT(animals.*) FROM animals LEFT JOIN visits ON animals.id =
 SELECT vets.name, species.name FROM vets LEFT JOIN specializations ON vets.id = specializations.vet_id LEFT JOIN species ON specializzations.species_id = species.id;
 
 -- List all animals that visited Stephanie Mendez between April 1st and August 30th, 2020.
-SELECT animals.*, visits.visit_date FROM animals LEFT JOIN visits ON animals.id = visits.animal_id LEFT JOIN vets ON visits.vet_id = vets.id WHERE vets.id = (SELECT id FROM vets WHERE vets.name = 'Stephanie Méndez') AND visits.visit_date BETWEEN '01-04-2020' AND '30-05-2020' ORDER BY visit_date DESC;
-
+SELECT animals.*, visits.visit_date FROM animals LEFT JOIN visits ON animals.id = visits.animal_id LEFT JOIN vets ON visits.vet_id = vets.id WHERE vets.id = (SELECT id FROM vets WHERE vets.name = 'Stephanie Méndez') AND visits.visit_date BETWEEN '01-04-2020' AND '30-08-2020' ORDER BY visit_date DESC;
 -- What animal has the most visits to vets?
 SELECT animals.name, COUNT (animals.id) FROM animals LEFT JOIN visits ON animals.id = visits.animal_id GROUP BY animals.id ORDER BY COUNT (animals.id) DESC;
 
