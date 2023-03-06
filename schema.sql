@@ -34,3 +34,10 @@ ALTER TABLE animals ADD FOREIGN KEY(owner_id) REFERENCES owners(id);
 CREATE TABLE vets(is SERIAL PRIMARY KEY, name VARCHAR(30), age INTEGER, date_of_graduation date);
 CREATE TABLE specializations(vet_id INTEGER, species_id INTEGER);
 CREATE TABLE visits(vet_id INTEGER, animal_id INTEGER, visit_date DATE);
+
+-- Add an email column to your owners table
+ALTER TABLE owners ADD COLUMN email VARCHAR(120);
+
+CREATE INDEX animal_visits ON visits(animal_id ASC);
+CREATE INDEX vet_visits ON visits(vet_id ASC);
+CREATE INDEX owners_name_index ON owners(email ASC);

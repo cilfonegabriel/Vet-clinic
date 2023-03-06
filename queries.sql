@@ -79,3 +79,7 @@ SELECT COUNT(*) FROM visits LEFT JOIN vets ON visits.vet_id = vets.id LEFT JOIN 
 
 -- What specialty should Maisy Smith consider getting? Look for the species she gets the most.
 SELECT species.name, COUNT(animals.*) FROM animals LEFT JOIN visits ON animals.id = visits.animal_id LEFT JOIN vets ON visits.vet_id = vets.id LEFT JOIN species ON animals.species_id = species.id WHERE vets.id = (SELECT id ROM vets WHERE vets.name = 'Maisy Smith')GROUP BY species.name ORDER BY COUNT(animals.*) DESC;
+
+EXPLAIN ANALYZE SELECT COUNT(*) FROM visits where animal_id = 4;
+EXPLAIN ANALYZE SELECT * FROM visits where vet_id = 2;
+EXPLAIN ANALYZE SELECT * FROM owners where email = 'owner_18327@mail.com';
